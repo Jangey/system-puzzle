@@ -24,7 +24,15 @@ def success():
     results = []
  
     qry = db_session.query(Items)
-    results = qry.all()
+    resultsJSON = qry.all()
+    
+    for e in resultsJSON:
+        one_item = {}
+        one_item["name"] = e.name
+        one_item["quantity"] = e.quantity
+        one_item["description"] = e.description
+        one_item["date_added"] = e.date_added.strftime('%Y-%m-%d %H:%M:%S')
+        results.append(one_item)
 
     return str(results)
   
