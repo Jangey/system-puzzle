@@ -65,3 +65,9 @@ No, you should focus on the functionality. Your engineering team will bring on a
 ### Should I use orchestration tools like Kubernetes?
 While technologies like Kubernetes are quite powerful, they're likely overkill for the simple application in this puzzle. We recommend that you stick to Docker Compose for this puzzle.
 
+<hr>
+
+### TroubleShoot
+- [x] Inside Docker-Compose.yml, Nginx port need fixed from **'80:8080'** to **'8080:80'**
+- [x] Inside flaskapp.conf proxy_pass port & Dockerfile expose port fixed from **'5001'** to **'5000'**
+- [x] Inside app.py We need to get the **correct item** from JSON file
